@@ -1,0 +1,128 @@
+\contentsline {part}{第一部分\hspace {1em}走进比较政治学的世界}{1}{part.1}%
+\contentsline {chapter}{\numberline {第一章\hspace {.3em}}引言：为什么要比较？——从首尔到阿克拉，两种命运的启示}{2}{chapter.1}%
+\contentsline {chapter}{\numberline {第二章\hspace {.3em}}政治世界的“地图”与“罗盘”}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}绘制地图：四个你必须知道的核心概念}{8}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}国家：政治世界的“硬件”与“容器”}{8}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}民族：政治世界的“灵魂”与“想象的共同体”}{9}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}政权：政治世界的“操作系统”与“游戏规则”}{11}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}政府：政治世界的“当班司机”}{11}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}四位一体：一个实例}{12}{subsection.2.1.5}%
+\contentsline {section}{\numberline {2.2}选择罗盘：像侦探一样思考}{13}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}案例研究：侦探的深度挖掘}{13}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}统计分析：情报官的宏观扫描}{14}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}侦探与情报官的联手}{15}{subsection.2.2.3}%
+\contentsline {section}{本章小结}{16}{section*.2}%
+\contentsline {part}{第二部分\hspace {1em}大问题：国家、政体与冲突}{17}{part.2}%
+\contentsline {chapter}{\numberline {第三章\hspace {.3em}}国家是如何炼成的？——从战争机器到“守夜人”}{18}{chapter.3}%
+\contentsline {section}{\numberline {3.1}“战争制造国家，国家发动战争”：欧洲的血腥往事}{19}{section.3.1}%
+\contentsline {section}{\numberline {3.2}镜鉴：中国的历史回响——另一条炼成之路}{21}{section.3.2}%
+\contentsline {section}{\numberline {3.3}前沿视角：为何有些国家强大，有些国家脆弱？}{22}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}国家能力：国家这台“机器”的性能如何？}{23}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}合法性：民众为何会服从？}{24}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}从“战争机器”到“守夜人”再到更多}{25}{section.3.4}%
+\contentsline {section}{结语}{25}{section*.3}%
+\contentsline {chapter}{\numberline {第四章\hspace {.3em}}民主的浪潮与暗礁——为何有些民主“活下来了”，有些却“死去了”？}{27}{chapter.4}%
+\contentsline {section}{\numberline {4.1}宏大叙事：席卷全球的民主化浪潮}{28}{section.4.1}%
+\contentsline {section}{\numberline {4.2}前沿辩论：民主如何“合法地”死去？}{32}{section.4.2}%
+\contentsline {section}{\numberline {4.3}民主的暗礁：我们为何走到了今天？}{34}{section.4.3}%
+\contentsline {section}{结语：在分裂的世界里重新守护民主}{35}{section*.4}%
+\contentsline {chapter}{\numberline {第五章\hspace {.3em}}威权者的“生存游戏”——揭秘现代独裁的运作密码}{36}{chapter.5}%
+\contentsline {section}{\numberline {5.1}打破刻板印象：威权主义并非铁板一块}{37}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}个人独裁：权力系于一人之身}{37}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}军事强权：枪杆子里出政权}{37}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}一党专政：最坚韧的“利维坦”}{38}{subsection.5.1.3}%
+\contentsline {section}{\numberline {5.2}现代独裁的运作密码：不止于暴力镇压}{39}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}选举式威权主义：一场精心编排的“民主秀”}{39}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}精密的信息控制：从“防火墙”到“舆论洪水”}{40}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}精英笼络：把潜在的敌人变成“自己人”}{40}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}绩效合法性：“面包”换“选票”的隐性契约}{41}{subsection.5.2.4}%
+\contentsline {section}{结语：一场没有终局的博弈}{42}{section*.5}%
+\contentsline {chapter}{\numberline {第六章\hspace {.3em}}枪声与怒火——我们如何理解政治暴力？}{43}{chapter.6}%
+\contentsline {section}{\numberline {6.1}超越“贫穷与仇恨”：从“不满”到“行动”的鸿沟}{44}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}“不满”是常态，而非引爆器}{44}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}“仇恨”是如何被“制造”出来的？}{44}{subsection.6.1.2}%
+\contentsline {section}{\numberline {6.2}前沿洞见：引爆冲突的“机会”与“资源”}{45}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}政治机会：反抗之窗}{45}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}资源诅咒：从钻石到石油的染血之路}{46}{subsection.6.2.2}%
+\contentsline {section}{\numberline {6.3}制度的设计：点燃还是熄灭冲突的火焰？}{47}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}催化冲突的制度：赢者通吃的游戏}{47}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}寻求和解的制度：权力分享的艺术}{48}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}案例对比：卢旺达的悲剧与哥伦比亚的和平探索}{49}{subsection.6.3.3}%
+\contentsline {subsection}{\numberline {6.3.4}另一种道路：非暴力抗争的力量}{50}{subsection.6.3.4}%
+\contentsline {section}{结语：理解复杂，走向和平}{51}{section*.6}%
+\contentsline {part}{第三部分\hspace {1em}舞台上的演员：制度、文化与社会}{52}{part.3}%
+\contentsline {chapter}{\numberline {第七章\hspace {.3em}}“游戏规则”的魔力——政治制度如何塑造我们的行为？}{53}{chapter.7}%
+\contentsline {section}{\numberline {7.1}权力的巅峰对决——总统制 vs. 议会制}{54}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}总统制：分权的艺术与僵局的风险}{54}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}议会制：效率的快车与不稳定的幽灵}{55}{subsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.1.3}小结：没有最好，只有最适合}{56}{subsection.7.1.3}%
+\contentsline {section}{\numberline {7.2}选票的奥秘——你的选票如何变成议席？}{57}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}多数制：赢者通吃与两党格局}{57}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}比例代表制：分享果实与多党林立}{58}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}混合制：寻求两全其美的艺术}{59}{subsection.7.2.3}%
+\contentsline {subsection}{\numberline {7.2.4}小结：清晰稳定 vs. 公平代表}{61}{subsection.7.2.4}%
+\contentsline {section}{结论：规则即命运}{61}{section*.7}%
+\contentsline {chapter}{\numberline {第八章\hspace {.3em}}看不见的纽带——政治文化与公民社会}{62}{chapter.8}%
+\contentsline {section}{\numberline {8.1}信任的价值：一个国家的“政治人格”}{63}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}普特南的意大利实验：社会资本的力量}{63}{subsection.8.1.1}%
+\contentsline {section}{\numberline {8.2}公民社会：民主的“健身房”与“看门狗”}{64}{section.8.2}%
+\contentsline {section}{\numberline {8.3}现代挑战：社交媒体时代的信任流失与极化}{66}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}连接的悖论：从“公民社会”到“数字部落”}{66}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}信任的系统性腐蚀}{67}{subsection.8.3.2}%
+\contentsline {section}{结论：重寻看不见的纽带}{68}{section*.8}%
+\contentsline {chapter}{\numberline {第九章\hspace {.3em}}我们为何这样投票？——选民、政党与身份认同}{69}{chapter.9}%
+\contentsline {section}{\numberline {9.1}利益还是认同：选民的两种“投票逻辑”}{70}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}逻辑一：口袋书选民——基于理性计算的选择}{70}{subsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.1.2}逻辑二：我们这类人——基于身份认同的选择}{71}{subsection.9.1.2}%
+\contentsline {subsection}{\numberline {9.1.3}我们时代的转变：身份压倒利益}{72}{subsection.9.1.3}%
+\contentsline {section}{\numberline {9.2}政党的兴衰：从“百货公司”到“专卖店”}{73}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}传统主流政党的衰落：昔日“百货公司”的危机}{73}{subsection.9.2.1}%
+\contentsline {subsection}{\numberline {9.2.2}民粹主义与身份政治政党的崛起：政治市场的“专卖店”}{74}{subsection.9.2.2}%
+\contentsline {section}{结语：在分裂的投票亭里}{75}{section*.9}%
+\contentsline {part}{第四部分\hspace {1em}政治的后果：发展、分配与福祉}{77}{part.4}%
+\contentsline {chapter}{\numberline {第十章\hspace {.3em}}“发展型国家”的东亚奇迹可以复制吗？}{78}{chapter.10}%
+\contentsline {section}{\numberline {10.1}解密成功故事：“发展型国家”的三大支柱}{79}{section.10.1}%
+\contentsline {subsection}{\numberline {10.1.1}驾驶舱里的“飞行员”：强力而精准的政府干预}{79}{subsection.10.1.1}%
+\contentsline {subsection}{\numberline {10.1.2}“最强大脑”：精英化的官僚体系}{80}{subsection.10.1.2}%
+\contentsline {subsection}{\numberline {10.1.3}“国家队”：政府与大企业的战略同盟}{81}{subsection.10.1.3}%
+\contentsline {section}{\numberline {10.2}现实的拷问：奇迹可以被复制吗？}{82}{section.10.2}%
+\contentsline {subsection}{\numberline {10.2.1}历史与地缘政治的“幸运窗口”}{82}{subsection.10.2.1}%
+\contentsline {subsection}{\numberline {10.2.2}“威权”的阴影：效率背后的代价}{83}{subsection.10.2.2}%
+\contentsline {subsection}{\numberline {10.2.3}全球化时代的“规则之变”}{83}{subsection.10.2.3}%
+\contentsline {section}{结语：从“复制模式”到“学习精神”}{84}{section*.10}%
+\contentsline {section}{结语：从“复制模式”到“学习精神”}{84}{section*.10}%
+\contentsline {chapter}{\numberline {第十一章\hspace {.3em}}富裕的悖论——政治如何决定不平等的程度？}{86}{chapter.11}%
+\contentsline {section}{\numberline {11.1}三种福利世界：我们社会隐藏的“操作系统”}{87}{section.11.1}%
+\contentsline {subsection}{\numberline {11.1.1}自由主义福利模式: 市场的信徒与一张“最小”的安全网}{87}{subsection.11.1.1}%
+\contentsline {subsection}{\numberline {11.1.2}社会民主主义福利模式: 平等是普世权利}{88}{subsection.11.1.2}%
+\contentsline {subsection}{\numberline {11.1.3}保守主义（或法团主义）福利模式: 维护传统的“稳定器”}{89}{subsection.11.1.3}%
+\contentsline {section}{\numberline {11.2}第四种世界？东亚的“生产主义”福利模式}{90}{section.11.2}%
+\contentsline {section}{\numberline {11.3}比较与反思：政治选择，而非经济宿命}{92}{section.11.3}%
+\contentsline {section}{\numberline {11.4}共同的挑战：福利国家的“中年危机”}{93}{section.11.4}%
+\contentsline {section}{结语：富裕背后，我们想要一个怎样的社会？}{94}{section*.11}%
+\contentsline {part}{第五部分\hspace {1em}全球化时代的挑战与未来}{95}{part.5}%
+\contentsline {chapter}{\numberline {第十二章\hspace {.3em}}民粹主义的全球风暴}{96}{chapter.12}%
+\contentsline {section}{\numberline {12.1}探究根源：经济焦虑还是文化反弹？}{97}{section.12.1}%
+\contentsline {subsection}{\numberline {12.1.1}第一种解释：经济焦虑的呐喊——“全球化的失意者”}{97}{subsection.12.1.1}%
+\contentsline {subsection}{\numberline {12.1.2}第二种解释：文化反弹的怒火——“价值的失落者”}{98}{subsection.12.1.2}%
+\contentsline {subsection}{\numberline {12.1.3}结论：一种有毒的鸡尾酒}{99}{subsection.12.1.3}%
+\contentsline {section}{\numberline {12.2}左右之别：民粹主义的两种面孔及其威胁}{100}{section.12.2}%
+\contentsline {subsection}{\numberline {12.2.1}右翼民粹主义：排他性的威胁}{100}{subsection.12.2.1}%
+\contentsline {subsection}{\numberline {12.2.2}左翼民粹主义：反制度的威胁}{101}{subsection.12.2.2}%
+\contentsline {section}{结语}{103}{section*.12}%
+\contentsline {chapter}{\numberline {第十三章\hspace {.3em}}当政治“遭遇”地球——气候变化、跨国移民与主权国家的困境}{104}{chapter.13}%
+\contentsline {section}{\numberline {13.1}全球难题的国内政治：为何拯救地球如此之难？}{105}{section.13.1}%
+\contentsline {subsection}{\numberline {13.1.1}政治周期 vs. 地质时间：政治家的“近视症”}{105}{subsection.13.1.1}%
+\contentsline {subsection}{\numberline {13.1.2}集中利益 vs. 分散利益：谁在游说？}{106}{subsection.13.1.2}%
+\contentsline {subsection}{\numberline {13.1.3}比较视角下的不同困境}{106}{subsection.13.1.3}%
+\contentsline {section}{\numberline {13.2}新的政治断层线：移民如何重塑左右翼}{108}{section.13.2}%
+\contentsline {subsection}{\numberline {13.2.1}比较视角下的新断层线}{109}{subsection.13.2.1}%
+\contentsline {section}{结语：主权国家的双重困境}{110}{section*.13}%
+\contentsline {chapter}{结语：在分裂的世界里，做一个清醒的公民}{112}{chapter*.14}%
+\contentsline {section}{回顾核心洞见：不存在“放之四海而皆准”的魔法}{113}{section*.15}%
+\contentsline {section}{在分裂的时代，运用比较的武器}{114}{section*.16}%
+\contentsline {section}{最后的思考：从理解世界到改变世界}{116}{section*.17}%
+\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}参考书目 (Bibliography)}{117}{appendix.A}%
+\contentsline {section}{核心概念与理论}{117}{section*.18}%
+\contentsline {section}{数字时代政治研究}{122}{section*.30}%
+\contentsline {section}{区域研究}{122}{section*.31}%
