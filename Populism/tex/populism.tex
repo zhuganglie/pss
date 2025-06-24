@@ -1,0 +1,84 @@
+% !TEX program = xelatex
+% ----------------------------------------------------------------------
+% populism_book.tex
+% A LaTeX file for the book "Populism: How Populism shapes our world"
+% Compiled with XeLaTeX
+% ----------------------------------------------------------------------
+
+\documentclass[UTF8, 10pt]{ctexbook}
+
+% --- PACKAGES ---
+\usepackage{geometry}      % For custom page layout
+\usepackage{lettrine}      % For drop caps at the beginning of chapters
+\usepackage{hyperref}      % For creating hyperlinks in the document
+\usepackage{enumitem}      % For list customization if needed
+
+% --- PAGE GEOMETRY SETUP FOR 32KAI BOOK ---
+% 32开 (32-mo) is approximately 130mm x 184mm.
+\geometry{
+    papersize={130mm, 184mm},
+    textwidth=95mm,
+    textheight=145mm,
+    top=18mm,
+    bottom=21mm,
+    left=15mm,
+    right=20mm,
+    headheight=14pt,
+    headsep=8pt,
+    footskip=12pt,
+    bindingoffset=5mm, % Space for the book spine
+    showframe=false    % Set to 'true' to visualize the layout frame
+}
+
+% --- HYPERREF SETUP ---
+% For a clean, professional look in the PDF.
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue,
+    citecolor=black,
+    pdftitle={权力的脸谱：民粹主义如何塑造我们的世界},
+    pdfauthor={猪刚鬣},
+    bookmarks=true,
+    bookmarksopen=true,
+    bookmarksnumbered=true
+}
+
+% --- DOCUMENT INFORMATION ---
+\title{权力的脸谱：民粹主义如何塑造我们的世界}
+\author{猪刚鬣}
+\date{\today}
+
+
+% ----------------------------------------------------------------------
+% --- BEGIN DOCUMENT ---
+% ----------------------------------------------------------------------
+\begin{document}
+% --- FRONT MATTER ---
+% Includes title page, table of contents. Page numbers are in Roman numerals.
+\frontmatter
+\maketitle
+\tableofcontents
+\include{introduction}
+
+% --- MAIN MATTER ---
+% The main content of the book. Page numbers switch to Arabic numerals.
+\mainmatter
+\include{chapter1}
+\include{chapter2}
+\include{chapter3}
+\include{chapter4}
+\include{chapter5}
+\include{chapter6}
+\include{chapter7}
+\include{chapter8}
+\include{chapter9}
+\include{chapter10}
+\include{chapter11}
+\include{chapter12}
+
+% --- BACK MATTER ---
+\backmatter
+\include{conclusion}
+\include{appendix}
+\end{document}
