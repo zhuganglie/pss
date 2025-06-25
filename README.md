@@ -30,4 +30,4 @@
 
 ## 致谢
 
-* 感谢推友 [Bot D](https://x.com/Lightning_Hand) 为第二章和第四章提供所需图片来源。
+* 感谢推友 [Bot D](https://x.com/Lightning_Hand) 为第二章和第四章所需图片提供来源。
