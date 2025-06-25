@@ -26,3 +26,8 @@
 ## 许可证
 
 本项目内容采用[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)许可协议。
+
+
+## 致谢
+
+* 感谢推友 [Bot D](https://x.com/Lightning_Hand) 为第二章和第四章提供所需图片来源。
