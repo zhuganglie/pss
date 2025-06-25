@@ -21,7 +21,7 @@
 *   校对和修正现有内容
 *   分享相关的学习资源
 
-请通过[提出 Issue](https://github.com/your-username/your-repository/issues)或[发起 Pull Request](https://github.com/your-username/your-repository/pulls)的方式参与贡献。
+请通过[提出 Issue](https://github.com/zhuganglie/pss/issues)或[发起 Pull Request](https://github.com/zhuganglie/pss/pulls)的方式参与贡献。
 
 ## 许可证
 
