@@ -30,4 +30,4 @@
 
 ## 致谢
 
-* 感谢推友 [Bot D](https://x.com/Lightning_Hand) 为第二章和第四章所需图片提供来源。
+* 感谢推友 [Bot D](https://x.com/Lightning_Hand) 为《世界政治的比较之旅： 我们时代的国家、权力和选择》第二章和第四章所需的图片提供来源。
