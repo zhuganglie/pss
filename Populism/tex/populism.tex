@@ -45,10 +45,26 @@
 }
 
 % --- DOCUMENT INFORMATION ---
-\title{权力的脸谱：民粹主义如何塑造我们的世界}
-\author{猪刚鬣}
+\title{
+    {\LARGE\bfseries\songti 权力的脸谱}\\[1cm]
+    {\Large\songti 民粹主义如何塑造我们的世界}
+}
+\author{社会科学科普开源项目组}
 \date{\today}
+\newcommand{\publisher}{社会科学科普开源项目组}
 
+\renewcommand{\maketitle}{
+    \begin{titlepage}
+        \thispagestyle{empty} % No page number on title page
+        \centering
+        \vspace*{\stretch{1.5}}
+        {\huge\bfseries\songti 权力的脸谱}\\[1cm]
+        {\large\bfseries\songti 民粹主义如何塑造我们的世界}\\[1cm] % Added vertical space after subtitle
+
+        \vfill % Push content above to the top
+        {\large \publisher} % Display publisher at the very bottom
+    \end{titlepage}
+}
 
 % ----------------------------------------------------------------------
 % --- BEGIN DOCUMENT ---
