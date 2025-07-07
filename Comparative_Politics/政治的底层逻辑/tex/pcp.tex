@@ -1,0 +1,126 @@
+% !TEX program = xelatex
+% ----------------------------------------------------------------------
+% populism_book.tex
+% A LaTeX file for the book "Populism: How Populism shapes our world"
+% Compiled with XeLaTeX
+% ----------------------------------------------------------------------
+
+\documentclass[UTF8, 10pt]{ctexbook}
+
+% --- PACKAGES ---
+\usepackage{geometry}      % For custom page layout
+\usepackage{lettrine}      % For drop caps at the beginning of chapters
+\usepackage{hyperref}      % For creating hyperlinks in the document
+\usepackage{enumitem}      % For list customization if needed
+\usepackage{graphicx}      % Required for \includegraphics
+\usepackage{fancyhdr}      % For custom headers and footers
+
+% --- PAGE GEOMETRY SETUP FOR 32KAI BOOK ---
+% 32开 (32-mo) is approximately 130mm x 184mm.
+\geometry{
+    papersize={130mm, 184mm},
+    textwidth=95mm,
+    textheight=145mm,
+    top=18mm,
+    bottom=21mm,
+    left=15mm,
+    right=20mm,
+    headheight=14pt,
+    headsep=8pt,
+    footskip=12pt,
+    bindingoffset=5mm, % Space for the book spine
+    showframe=false    % Set to 'true' to visualize the layout frame
+}
+
+% --- HEADER AND FOOTER SETUP ---
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyfoot[C]{\thepage} % Page number in the center of the footer
+\renewcommand{\headrulewidth}{0pt} % No header rule
+
+% --- HYPERREF SETUP ---
+% For a clean, professional look in the PDF.
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue,
+    citecolor=black,
+    pdftitle={政治的底层逻辑},
+    pdfauthor={社会科学科普开源项目组},
+    bookmarks=true,
+    bookmarksopen=true,
+    bookmarksnumbered=false
+}
+
+% Remove numbering from sections and subsections
+\setcounter{secnumdepth}{0}
+
+% --- DOCUMENT INFORMATION ---
+\title{
+    {\LARGE\bfseries\songti 政治的底层逻辑}\\[1cm]
+    {\Large\songti 一本写给普通人的比较政治学通识读本}
+}
+\author{社会科学科普开源项目组}
+\date{\today}
+\newcommand{\publisher}{社会科学科普开源项目组}
+
+\renewcommand{\maketitle}{
+
+
+    \begin{titlepage}
+        \thispagestyle{empty} % No page number on title page
+        \centering
+        \vspace*{\stretch{1.5}}
+        {\huge\bfseries\songti 政治的底层逻辑}\\[1cm]
+        {\large\bfseries\songti 一本写给普通人的比较政治学通识读本}\\[1cm] % Added vertical space after subtitle
+
+        \vfill % Push content above to the top
+        {\large \publisher} % Display publisher at the very bottom
+    \end{titlepage}
+}
+
+% ----------------------------------------------------------------------
+% --- BEGIN DOCUMENT ---
+
+% ----------------------------------------------------------------------
+\begin{document}
+% --- FRONT MATTER ---
+% Includes title page, table of contents. Page numbers are in Roman numerals.
+\frontmatter
+\maketitle
+\renewcommand{\contentsname}{目录}
+\setcounter{tocdepth}{1}
+\setcounter{secnumdepth}{0}
+\tableofcontents
+
+
+\include{preview}
+
+% --- MAIN MATTER ---
+% The main content of the book. Page numbers switch to Arabic numerals.
+\mainmatter
+\include{chapter01}
+\include{chapter02}
+\include{chapter03}
+\include{chapter04}
+\include{chapter05}
+\include{chapter06}
+\include{chapter07}
+\include{chapter08}
+\include{chapter09}
+\include{chapter10}
+\include{chapter11}
+\include{chapter12}
+\include{chapter13}
+\include{chapter14}
+\include{chapter15}
+\include{chapter16}
+
+% --- BACK MATTER ---
+\backmatter
+
+\appendix
+\include{conclusion}
+\include{glossary}
+\include{bibliography}
+\end{document}
