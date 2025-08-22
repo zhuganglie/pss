@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信息图：中国的“多孔审查”策略</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #FAF3E0;
+            --text-color: #4A4A4A;
+            --header-color: #B85C38;
+            --accent-color: #5E8B7E;
+            --card-bg-color: #FFFFFF;
+            --shadow-color: rgba(0, 0, 0, 0.08);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            color: var(--header-color);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        header p.subtitle {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--text-color);
+        }
+
+        h2.section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--header-color);
+            margin-top: 5rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        h2.section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-color);
+            margin: 0.5rem auto 0;
+            border-radius: 2px;
+        }
+
+        .mechanisms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .mechanism-card {
+            background-color: var(--card-bg-color);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 8px 25px var(--shadow-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 5px solid var(--accent-color);
+        }
+
+        .mechanism-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .mechanism-card .icon {
+            font-size: 3.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .mechanism-card h4 {
+            font-size: 1.6rem;
+            color: var(--header-color);
+            margin-bottom: 1rem;
+        }
+
+        .mechanism-card p {
+            font-size: 1rem;
+            text-align: left;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+            box-shadow: 0 8px 25px var(--shadow-color);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 1rem 1.2rem;
+            text-align: left;
+            border-bottom: 1px solid #E0D8C6;
+        }
+
+        .comparison-table th {
+            background-color: var(--accent-color);
+            color: var(--card-bg-color);
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: #F7F2E9;
+        }
+        
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table td:first-child {
+            font-weight: 600;
+            color: var(--header-color);
+        }
+
+        .implications-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .implication-card {
+            background: var(--card-bg-color);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px var(--shadow-color);
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+        
+        .implication-card .icon {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-top: 5px;
+        }
+
+        .implication-card h4 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.3rem;
+            color: var(--header-color);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 5rem;
+            padding-top: 2rem;
+            border-top: 1px solid #E0D8C6;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+            h2.section-title {
+                font-size: 1.8rem;
+            }
+            .implications-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>中国的“多孔审查”策略</h1>
+            <p class="subtitle">一个看似矛盾的信息控制体系：它并非密不透风的铁幕，而是充满缝隙。这并非技术缺陷，而是一种经过深思熟虑的、旨在实现成本效益最大化的战略设计。</p>
+        </header>
+
+        <main>
+            <section id="mechanisms">
+                <h2 class="section-title">三种核心审查机制</h2>
+                <div class="mechanisms-grid">
+                    <div class="mechanism-card">
+                        <div class="icon"><i class="fa-solid fa-gavel"></i></div>
+                        <h4>恐惧 (Fear)</h4>
+                        <p>最传统的审查方式。通过明确的惩罚威胁（如监禁、失业）来威慑民众，促使其自我审查。这种方式可见性高，成本巨大，且容易引发逆反心理，因此主要针对政治精英和活动家等少数目标。</p>
+                    </div>
+                    <div class="mechanism-card">
+                        <div class="icon"><i class="fa-solid fa-sliders"></i></div>
+                        <h4>摩擦 (Friction)</h4>
+                        <p>一种隐蔽的“信息税”。它不直接禁止，而是通过技术手段（如网页加载缓慢、VPN屏蔽）增加获取信息的成本。它利用了大众的“理性无知”，在不被察觉的情况下引导大多数人远离敏感信息。</p>
+                    </div>
+                    <div class="mechanism-card">
+                        <div class="icon"><i class="fa-solid fa-water"></i></div>
+                        <h4>洪水 (Flooding)</h4>
+                        <p>最间接的审查方式。通过大规模制造和传播政府认可的信息（宣传、娱乐八卦）来稀释、淹没和分散公众对敏感信息的注意力。它将宣传从“说服”工具转变为“分心”工具。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="comparison">
+                <h2 class="section-title">机制对比</h2>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>特征维度</th>
+                            <th>恐惧 (Fear)</th>
+                            <th>摩擦 (Friction)</th>
+                            <th>洪水 (Flooding)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>主要目标</td>
+                            <td>威慑与禁止</td>
+                            <td>引导与分流</td>
+                            <td>分散与稀释</td>
+                        </tr>
+                        <tr>
+                            <td>作用方式</td>
+                            <td>施加惩罚性后果</td>
+                            <td>增加获取成本</td>
+                            <td>增加替代信息的相对优势</td>
+                        </tr>
+                        <tr>
+                            <td>可见性</td>
+                            <td>高 (必须被感知才能生效)</td>
+                            <td>低 (可伪装成技术问题)</td>
+                            <td>极低 (伪装成有机内容)</td>
+                        </tr>
+                        <tr>
+                            <td>主要目标受众</td>
+                            <td>政治精英、活动家</td>
+                            <td>普通大众</td>
+                            <td>普通大众</td>
+                        </tr>
+                        <tr>
+                            <td>主要弱点</td>
+                            <td>引发逆反心理</td>
+                            <td>在危机时刻失效</td>
+                            <td>长期损害信息环境可信度</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="implications">
+                <h2 class="section-title">脆弱性与全球启示</h2>
+                <div class="implications-grid">
+                    <div class="implication-card">
+                        <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div>
+                            <h4>体系的“阿喀琉斯之踵”</h4>
+                            <p>系统的有效性依赖于民众的政治冷漠。当与切身利益相关的重大危机爆发时，民众获取信息的需求会从“弹性”变为“刚性”，此时“摩擦”和“洪水”等手段会迅速失效。</p>
+                        </div>
+                    </div>
+                    <div class="implication-card">
+                        <div class="icon"><i class="fa-solid fa-globe"></i></div>
+                        <div>
+                            <h4>对民主社会的警示</h4>
+                            <p>“摩擦”（如算法偏见）和“洪水”（如假新闻泛滥）同样存在于民主社会。对言论自由的威胁已不仅是“禁止”，更是通过操纵注意力来“淹没”和“边缘化”特定信息。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>信息图根据玛格丽特·E·罗伯茨的著作《审查：中国防火墙内的分心与转移》核心观点生成。</p>
+        </footer>
+    </div>
+
+</body>
+</html>
