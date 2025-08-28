@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信息图：中国的多孔审查策略</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #FAF3E0;
+            --text-color: #3D405B;
+            --primary-color: #E07A5F;
+            --card-bg: #FFFFFF;
+            --header-font: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            --body-font: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            font-family: var(--body-font);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid rgba(0,0,0,0.05);
+            padding-bottom: 20px;
+        }
+
+        header h1 {
+            font-family: var(--header-font);
+            font-size: 2.8em;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        header .subtitle {
+            font-size: 1.2em;
+            color: #81B29A;
+            font-weight: bold;
+        }
+        
+        .intro-note {
+            background-color: #F2CC8F;
+            color: #3D405B;
+            padding: 15px 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 0.95em;
+            border: 1px solid #E07A5F;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-family: var(--header-font);
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 8px auto 0;
+        }
+
+        .cards-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+            padding: 25px;
+            flex: 1;
+            min-width: 280px;
+            max-width: 350px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .card .icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
+        .icon.fear { color: #D9534F; }
+        .icon.friction { color: #F0AD4E; }
+        .icon.flooding { color: #5BC0DE; }
+
+        .card h4 {
+            font-family: var(--header-font);
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .card p {
+            font-size: 0.95em;
+            text-align: left;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            font-size: 0.9em;
+        }
+
+        .card ul li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .card ul li i {
+            margin-right: 10px;
+            margin-top: 4px;
+            color: #81B29A;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid #EAEAEA;
+        }
+
+        .comparison-table th {
+            background-color: #3D405B;
+            color: #FFFFFF;
+            font-family: var(--header-font);
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: #F9F9F9;
+        }
+        
+        .comparison-table tr:hover {
+            background-color: #F2CC8F;
+        }
+
+        .visualization-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .viz-item {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .viz-item h4 {
+            font-family: var(--header-font);
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+        }
+
+        .bar-chart-container {
+            width: 100%;
+        }
+        
+        .bar-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+
+        .bar {
+            background-color: #EAEAEA;
+            border-radius: 5px;
+            height: 20px;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 5px;
+            background-color: var(--primary-color);
+            text-align: right;
+            color: white;
+            font-size: 0.8em;
+            line-height: 20px;
+            padding-right: 5px;
+        }
+        
+        .achilles-heel {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .achilles-heel .icon {
+            font-size: 4em;
+            color: var(--primary-color);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #EAEAEA;
+            font-size: 0.9em;
+            color: #888;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 10px;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            .section-title {
+                font-size: 1.6em;
+            }
+            .card {
+                min-width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1><i class="fa-solid fa-eye-slash"></i> 中国的多孔审查</h1>
+            <p class="subtitle">一种基于恐惧、摩擦与洪水的战略性信息控制体系</p>
+        </header>
+
+        <main>
+            <p class="intro-note">注意：源文件内容详尽，以下是其核心要点的可视化总结，旨在揭示中国审查体系并非技术缺陷，而是一种经过深思熟虑的战略设计。</p>
+
+            <section id="mechanisms">
+                <h2 class="section-title">三种核心审查机制</h2>
+                <div class="cards-container">
+                    <div class="card">
+                        <i class="fas fa-gavel icon fear"></i>
+                        <h4>恐惧 (Fear)</h4>
+                        <p>最传统的审查方式，通过明确的惩罚威胁来阻止信息传播，促使民众自我审查。</p>
+                        <ul>
+                            <li><i class="fa-solid fa-bullseye"></i> <strong>目标:</strong> 威慑与禁止</li>
+                            <li><i class="fa-solid fa-eye"></i> <strong>可见性:</strong> 高 (必须被感知才能生效)</li>
+                            <li><i class="fa-solid fa-user-tie"></i> <strong>受众:</strong> 政治精英、活动家、记者</li>
+                            <li><i class="fa-solid fa-triangle-exclamation"></i> <strong>弱点:</strong> 易引发逆反心理 (“审查适得其反”)</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-hourglass-half icon friction"></i>
+                        <h4>摩擦 (Friction)</h4>
+                        <p>通过技术或行政手段增加获取信息的成本（时间、金钱、精力），如对信息“征税”。</p>
+                        <ul>
+                            <li><i class="fa-solid fa-shuffle"></i> <strong>目标:</strong> 引导与分流</li>
+                            <li><i class="fa-solid fa-eye-slash"></i> <strong>可见性:</strong> 低 (可伪装成技术问题)</li>
+                            <li><i class="fa-solid fa-users"></i> <strong>受众:</strong> 普通大众</li>
+                            <li><i class="fa-solid fa-shield-halved"></i> <strong>优势:</strong> 高效、低成本、不易察觉</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-water icon flooding"></i>
+                        <h4>洪水 (Flooding)</h4>
+                        <p>通过大规模制造和传播官方认可的信息来稀释、淹没和分散对敏感信息的注意力。</p>
+                        <ul>
+                            <li><i class="fa-solid fa-hand-sparkles"></i> <strong>目标:</strong> 分散与稀释</li>
+                            <li><i class="fa-solid fa-mask"></i> <strong>可见性:</strong> 极低 (伪装成有机内容)</li>
+                            <li><i class="fa-solid fa-users-line"></i> <strong>受众:</strong> 普通大众</li>
+                            <li><i class="fa-solid fa-arrow-trend-up"></i> <strong>策略:</strong> 制造“正能量”内容冲淡负面信息</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="comparison">
+                <h2 class="section-title">审查机制比较</h2>
+                <div style="overflow-x:auto;">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>特征维度</th>
+                                <th>恐惧 (Fear)</th>
+                                <th>摩擦 (Friction)</th>
+                                <th>洪水 (Flooding)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>主要目标</strong></td>
+                                <td>威慑与禁止</td>
+                                <td>引导与分流</td>
+                                <td>分散与稀释</td>
+                            </tr>
+                            <tr>
+                                <td><strong>作用方式</strong></td>
+                                <td>施加惩罚性后果</td>
+                                <td>增加获取成本</td>
+                                <td>增加替代信息的相对优势</td>
+                            </tr>
+                            <tr>
+                                <td><strong>可见性</strong></td>
+                                <td>高 (必须被感知才能生效)</td>
+                                <td>低 (可伪装成技术问题)</td>
+                                <td>极低 (伪装成有机内容)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>主要目标受众</strong></td>
+                                <td>政治精英、活动家、记者</td>
+                                <td>普通大众</td>
+                                <td>普通大众</td>
+                            </tr>
+                            <tr>
+                                <td><strong>主要弱点</strong></td>
+                                <td>缺乏可信度时引发逆反心理</td>
+                                <td>在危机时刻失效</td>
+                                <td>长期可能损害信息环境的整体可信度</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="effectiveness">
+                <h2 class="section-title">机制的现实效力</h2>
+                <div class="visualization-grid">
+                    <div class="viz-item">
+                        <h4><i class="fas fa-chart-bar"></i> “摩擦”的强大影响</h4>
+                        <p style="font-size:0.9em; text-align:center; margin-bottom:20px;">尽管“翻墙”技术广为人知，但“麻烦”这一摩擦因素使大多数人选择放弃。</p>
+                        <div class="bar-chart-container">
+                            <div class="bar-label"><span>了解“翻墙”的网民</span><strong>~ 100%</strong></div>
+                            <div class="bar"><div class="bar-fill" style="width: 95%;"></div></div>
+                            <div class="bar-label"><span>经常“翻墙”的网民</span><strong>~ 5%</strong></div>
+                            <div class="bar"><div class="bar-fill" style="width: 5%; background-color: #81B29A;"></div></div>
+                        </div>
+                    </div>
+                    <div class="viz-item">
+                        <h4><i class="fas fa-comments"></i> “洪水”的真实面目</h4>
+                        <p style="font-size:0.9em; text-align:center; margin-bottom:20px;">对“五毛党”指令的分析显示，其主要任务是分散注意力的“喝彩助威”，而非辩论。</p>
+                        <div class="bar-chart-container">
+                            <div class="bar-label"><span>喝彩助威/正能量</span><strong>> 80%</strong></div>
+                            <div class="bar"><div class="bar-fill" style="width: 80%;"></div></div>
+                            <div class="bar-label"><span>与批评者辩论</span><strong>< 20%</strong></div>
+                            <div class="bar"><div class="bar-fill" style="width: 20%; background-color: #81B29A;"></div></div>
+                        </div>
+                    </div>
+                    <div class="viz-item">
+                        <h4><i class="fas fa-bomb"></i> “恐惧”的代价：适得其反</h4>
+                        <p style="font-size:0.9em; text-align:center; margin-bottom:20px;">公开的审查行为会激发用户更强的好奇心和探究欲，而非恐惧。</p>
+                        <div class="bar-chart-container">
+                             <div class="bar-label"><span>帖子被删后的感受：“愤怒”</span><strong>23%</strong></div>
+                            <div class="bar"><div class="bar-fill" style="width: 23%;"></div></div>
+                            <div class="bar-label"><span>“无所谓”</span><strong>35%</strong></div>
+                            <div class="bar"><div class="bar-fill" style="width: 35%; background-color: #F2CC8F; color:#333;"></div></div>
+                            <div class="bar-label"><span>“担心或害怕”</span><strong>仅 5%</strong></div>
+                            <div class="bar"><div class="bar-fill" style="width: 5%; background-color: #81B29A;"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="vulnerability">
+                <h2 class="section-title">体系的“阿喀琉斯之踵”</h2>
+                <div class="viz-item achilles-heel">
+                    <i class="fas fa-shield-virus icon"></i>
+                    <div>
+                        <h4>危机时刻的审查失效</h4>
+                        <p>当发生与民众切身利益相关的重大危机时（如天津港爆炸），获取信息的需求会从“弹性”变为“刚性”。此时，公民有极强动力去克服“摩擦”，导致审查体系迅速失效。数据显示，危机后“翻墙”用户比例会激增数倍。</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>信息来源：基于玛格丽特·E·罗伯茨（Margaret E. Roberts）的著作《审查：中国防火墙内的分心与转移》的核心观点进行总结与可视化。</p>
+        </footer>
+    </div>
+
+</body>
+</html>
