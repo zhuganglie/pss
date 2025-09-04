@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信息图：支配与动员</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #FAF3E0;
+            --text-color: #3D3B30;
+            --header-color: #B85C38;
+            --accent-color-1: #5E8B7E;
+            --accent-color-2: #A52A2A;
+            --card-bg-color: #FDF8EE;
+            --border-color: #E0D8C0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 2rem;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 1.5rem;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            color: var(--header-color);
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin-top: 0;
+        }
+        
+        .summary-note {
+            text-align: center;
+            font-style: italic;
+            color: #777;
+            background-color: var(--card-bg-color);
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        main > section {
+            background-color: var(--card-bg-color);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--header-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: #FFFFFF;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            color: var(--accent-color-1);
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        .flowchart {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            text-align: center;
+        }
+
+        .flow-item {
+            padding: 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            min-width: 150px;
+        }
+
+        .flow-arrow {
+            font-size: 2rem;
+            color: var(--header-color);
+        }
+
+        .chart-container {
+            width: 100%;
+            margin-top: 1.5rem;
+        }
+        
+        .chart-title {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+
+        .bar-chart {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            height: 250px;
+            border-bottom: 2px solid var(--text-color);
+            padding: 0 1rem;
+            gap: 1rem;
+        }
+
+        .bar-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            height: 100%;
+        }
+        
+        .bars-wrapper {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            gap: 5px;
+        }
+
+        .bar {
+            width: 35px;
+            background-color: var(--accent-color-1);
+            position: relative;
+            transition: height 0.5s ease-out;
+        }
+        
+        .bar.kmt { background-color: var(--accent-color-1); }
+        .bar.ccp { background-color: var(--accent-color-2); }
+
+        .bar .label {
+            position: absolute;
+            top: -20px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: var(--text-color);
+        }
+        
+        .year-label {
+            margin-top: 0.5rem;
+            font-weight: bold;
+        }
+
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .legend-color {
+            width: 15px;
+            height: 15px;
+            border-radius: 2px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 1rem; }
+            header h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+            .flowchart { flex-direction: column; }
+            .bar { width: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>支配与动员 (Domination & Mobilization)</h1>
+            <p>吕晓波 (Xiaobo Lü) 著作核心观点解析</p>
+        </header>
+
+        <p class="summary-note">注意：源文件内容详尽，以下是其核心要点的可视化总结。</p>
+
+        <main>
+            <section>
+                <h2><i class="fas fa-book-open"></i>核心论点</h2>
+                <p>本书探讨了二十世纪初期中国国民党（KMT）与中国共产党（CCP）命运戏剧性逆转的深层原因。作者吕晓波指出，对革命性政党而言，<strong>“支配”（Domination）</strong>与<strong>“动员”（Mobilization）</strong>是夺取国家政权的关键。本书挑战了关于威权政党中权力分享的传统观点，并强调了拥有一个支配性领导人对于组织整合与资源动员的至关重要性。</p>
+            </section>
+
+            <section>
+                <h2><i class="fas fa-sitemap"></i>革命性政党的力量起源</h2>
+                <div class="flowchart">
+                    <div class="flow-item">党内精英<br>权力平衡</div>
+                    <div class="flow-arrow">&rarr;</div>
+                    <div class="flow-item">政党建设<br>策略</div>
+                    <div class="flow-arrow">&rarr;</div>
+                    <div class="flow-item">政党动员<br>基础设施</div>
+                    <div class="flow-arrow">&rarr;</div>
+                    <div class="flow-item">资源动员<br>能力</div>
+                </div>
+            </section>
+
+            <section>
+                <h2><i class="fas fa-balance-scale"></i>两大政党对比：动员模式的差异</h2>
+                <div class="grid-container">
+                    <div class="card">
+                        <h3><i class="fas fa-users" style="color: var(--accent-color-2);"></i> 中国共产党 (CCP)</h3>
+                        <p><strong>模式:</strong> 群众动员 (Mass Mobilization)。优先建立深入社会底层的草根组织，核心成员是教师、蓝领工人和农民等“无权”群众。</p>
+                        <p><strong>优势:</strong> 战争期间能够有效进行资源榨取（如征粮），并重塑社会权力结构。</p>
+                        <p><strong>劣势:</strong> 启动成本极高，需要巨大的努力和资源投入。</p>
+                    </div>
+                    <div class="card">
+                        <h3><i class="fas fa-user-tie" style="color: var(--accent-color-1);"></i> 中国国民党 (KMT)</h3>
+                        <p><strong>模式:</strong> 精英中心动员 (Elite-centric Mobilization)。优先吸纳和团结既有的政经精英，让他们成为党的核心成员。</p>
+                        <p><strong>优势:</strong> 能快速获取财政资源和利用现有精英网络。</p>
+                        <p><strong>劣势:</strong> 战争摧毁了其所依赖的城市精英基础，导致其动员能力崩溃，且难以维持精英内部的团结。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2><i class="fas fa-chart-line"></i>关键数据可视化</h2>
+                
+                <div class="chart-container">
+                    <h3 class="chart-title">党员数量的惊人逆转 (1927-1945)</h3>
+                    <div class="bar-chart">
+                        <div class="bar-group">
+                            <div class="bars-wrapper">
+                                <div class="bar kmt" style="height: 80%;"><span class="label">~54万</span></div>
+                                <div class="bar ccp" style="height: 2%;"><span class="label">~1万</span></div>
+                            </div>
+                            <div class="year-label">1927</div>
+                        </div>
+                        <div class="bar-group">
+                            <div class="bars-wrapper">
+                                <div class="bar kmt" style="height: 95%;"><span class="label">~154万</span></div>
+                                <div class="bar ccp" style="height: 5%;"><span class="label">~4万</span></div>
+                            </div>
+                            <div class="year-label">1937</div>
+                        </div>
+                        <div class="bar-group">
+                            <div class="bars-wrapper">
+                                <div class="bar kmt" style="height: 100%;"><span class="label">~688万</span></div>
+                                <div class="bar ccp" style="height: 75%;"><span class="label">~121万</span></div>
+                            </div>
+                            <div class="year-label">1945</div>
+                        </div>
+                    </div>
+                    <div class="legend">
+                        <div class="legend-item"><span class="legend-color" style="background: var(--accent-color-1);"></span> KMT</div>
+                        <div class="legend-item"><span class="legend-color" style="background: var(--accent-color-2);"></span> CCP</div>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <h3 class="chart-title">战时粮食征收率对比 (1941-1945 平均)</h3>
+                     <div class="bar-chart">
+                        <div class="bar-group">
+                            <div class="bars-wrapper">
+                                <div class="bar kmt" style="height: 33%; width: 50px;"><span class="label">6.62%</span></div>
+                            </div>
+                            <div class="year-label">KMT</div>
+                        </div>
+                        <div class="bar-group">
+                             <div class="bars-wrapper">
+                                <div class="bar ccp" style="height: 52%; width: 50px;"><span class="label">10.35%</span></div>
+                            </div>
+                            <div class="year-label">CCP (陕甘宁)</div>
+                        </div>
+                         <div class="bar-group">
+                             <div class="bars-wrapper">
+                                <div class="bar ccp" style="height: 100%; width: 50px;"><span class="label">19.67%</span></div>
+                            </div>
+                            <div class="year-label">CCP (晋绥)</div>
+                        </div>
+                        <div class="bar-group">
+                             <div class="bars-wrapper">
+                                <div class="bar ccp" style="height: 59%; width: 50px;"><span class="label">11.85%</span></div>
+                            </div>
+                            <div class="year-label">CCP (晋察冀)</div>
+                        </div>
+                    </div>
+                    <p style="text-align:center; font-size: 0.9rem; margin-top: 1rem;">数据显示，尽管传统印象相反，但中共在战争期间从其根据地提取了更高比例的粮食产出，这得益于其高效的群众动员体系。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2><i class="fas fa-lightbulb"></i>核心启示</h2>
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>支配性领导的重要性</h3>
+                        <p>与强调“权力分享”的观点相反，一个强有力的、能够解决内斗的支配性领导者（如毛泽东之于中共），对凝聚力量、统一策略至关重要。国民党则因持续的精英内斗而削弱。</p>
+                    </div>
+                    <div class="card">
+                        <h3>资源动员 > 成员数量</h3>
+                        <p>政党的真正实力不仅在于党员数量，更在于其动员关键资源（尤其是财政和粮食）的能力。中共的群众动员基础设施最终在资源榨取上胜过了国民党的精英动员模式。</p>
+                    </div>
+                    <div class="card">
+                        <h3>历史偶然性的作用</h3>
+                        <p>历史并非预设。抗日战争等外部冲击（偶然事件）极大地改变了国共两党的动员基础设施的相对优势，削弱了国民党所依赖的城市精英，为中共的农村动员创造了机会。</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>基于 Xiaobo Lü 的著作《Domination & Mobilization》核心内容生成的信息图。</p>
+        </footer>
+    </div>
+
+</body>
+</html>
