@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信息图：弱者联盟 (A4版)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --text-color: #3D405B;
+            --header-color: #81B29A;
+            --accent-color: #E07A5F;
+            --bar-color: #81B29A;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            background-color: #e0e0e0; /* Grey background to see the page */
+            display: flex;
+            justify-content: center;
+            padding: 2rem 0;
+            line-height: 1.5;
+        }
+
+        .a4-page {
+            width: 210mm;
+            min-height: 297mm; /* Use min-height to allow content to expand */
+            padding: 15mm;
+            background: #ffffff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.15);
+            box-sizing: border-box;
+            color: var(--text-color);
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--header-color);
+            padding-bottom: 1rem;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        header h1 .icon {
+            color: var(--accent-color);
+        }
+
+        header h2 {
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: var(--text-color);
+        }
+        
+        header .author {
+            font-size: 1rem;
+            color: #888;
+            margin-top: 0.8rem;
+        }
+
+        .disclaimer {
+            background-color: #fefcf5;
+            border-left: 5px solid var(--accent-color);
+            padding: 1rem 1.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--header-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .card {
+            background-color: #fefcf5;
+            border-radius: 8px;
+            padding: 1.5rem;
+            border: 1px solid #eee;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .card p { margin-bottom: 0.8rem; font-size: 0.95rem; }
+        .card ul { padding-left: 20px; margin: 0; font-size: 0.95rem; }
+
+        .bar-chart-container {
+            background-color: #fefcf5;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+
+        .bar-chart {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            height: 200px;
+            padding: 1rem;
+            border-left: 2px solid var(--text-color);
+            border-bottom: 2px solid var(--text-color);
+            position: relative;
+        }
+
+        .bar {
+            width: 15%;
+            background-color: var(--bar-color);
+            text-align: center;
+            position: relative;
+        }
+
+        .bar .label { position: absolute; bottom: -2rem; width: 100%; text-align: center; font-size: 0.8rem; font-weight: bold; }
+        .bar .value { position: absolute; top: -1.5rem; width: 100%; text-align: center; font-weight: bold; }
+
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            padding: 1.5rem 0;
+        }
+        
+        .timeline::before { content: ''; position: absolute; top: 25px; left: 5%; right: 5%; height: 3px; background-color: var(--header-color); z-index: 0; }
+
+        .timeline-item { flex: 1; text-align: center; position: relative; padding: 0 1rem; }
+        .timeline-icon { width: 50px; height: 50px; background: #fff; border: 3px solid var(--header-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; color: var(--accent-color); position: relative; z-index: 1; }
+        .timeline-item h4 { margin: 0.5rem 0; color: var(--text-color); }
+        .timeline-item p { font-size: 0.9rem; margin: 0 auto; }
+
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        @media print {
+            body {
+                background-color: #fff;
+                padding: 0;
+            }
+            .a4-page {
+                width: 100%;
+                min-height: auto;
+                margin: 0;
+                box-shadow: none;
+                padding: 0;
+            }
+            footer {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="a4-page">
+        <div class="container">
+            <header>
+                <h1><i class="fa-solid fa-chess-king icon"></i> 弱者联盟</h1>
+                <h2>维克多·C·史 (Victor C. Shih) 著作的核心思想</h2>
+                <p class="author">《Coalitions of the Weak》内容可视化</p>
+            </header>
+
+            <p class="disclaimer">注意：源文件内容详尽，以下是其核心要点的可视化总结。</p>
+
+            <div class="section">
+                <h3 class="section-title"><i class="fa-solid fa-key"></i>核心概念：什么是“弱者联盟”？</h3>
+                <div class="card">
+                    <p>“弱者联盟”是独裁者（尤其是毛泽东）为巩固权力而采取的一种统治策略。其核心是：<strong>用政治上有污点或经验不足的官员，取代那些经验丰富、人脉广泛的强势精英。</strong></p>
+                    <p>这些“弱者”由于自身根基不稳，必须完全依赖独裁者的庇护才能生存，因此他们几乎没有能力或意愿挑战最高权力。这是一种确保独裁者个人绝对安全的政治权术。</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title"><i class="fa-solid fa-users-slash"></i>“弱者”的两大类型</h3>
+                <div class="grid-container">
+                    <div class="card">
+                        <h4 class="card-title"><i class="fa-solid fa-shield-heart"></i> 1. 政治污点官员</h4>
+                        <p><strong>定义:</strong> 指那些在历史上曾犯过“路线错误”、站错队或与敌对派系有牵连的官员。</p>
+                        <ul>
+                            <li><strong>特征:</strong> 他们的政治“原罪”使其难以被其他精英派系接纳。</li>
+                            <li><strong>对独裁者的价值:</strong> 他们的忠诚度极高，因为他们的政治生命完全系于独裁者的赦免和提拔。背叛的成本极高。</li>
+                            <li><strong>书中案例:</strong> 毛泽东提拔和保护了大量曾隶属于“反革命分裂主义”派系（如四方面军）的干部。</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4 class="card-title"><i class="fa-solid fa-chess-pawn"></i> 2. 经验不足官员</h4>
+                        <p><strong>定义:</strong> 指那些缺乏在高层政治中所需经验、人脉和资历的官员，常被“火箭式”提拔。</p>
+                        <ul>
+                            <li><strong>特征:</strong> 政治网络薄弱，对复杂的官僚体系运作不熟悉。</li>
+                            <li><strong>对独裁者的价值:</strong> 易于控制，难以形成自己的势力范围。他们是完美的“政治棋子”，可以随时被牺牲而不会引发大的震动。</li>
+                            <li><strong>书中案例:</strong> 毛泽东提拔的“笔杆子”（理论家）和劳动模范（如王洪文）。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title"><i class="fa-solid fa-chart-simple"></i>数据证据：政治局中“弱者”的崛起</h3>
+                <div class="bar-chart-container">
+                    <p style="text-align:center; margin-bottom: 1rem; font-size:0.95rem;">书中数据显示，从中共八大到十大，毛泽东政治局中“弱者”（网络联系少于10%中央委员的成员）的比例急剧上升，印证了“弱者联盟”策略的实施。</p>
+                    <div class="bar-chart">
+                        <div class="bar" style="height: 14%;"><div class="value">8%</div><div class="label">中共八大 (1956)</div></div>
+                        <div class="bar" style="height: 64%;"><div class="value">36%</div><div class="label">中共九大 (1969)</div></div>
+                        <div class="bar" style="height: 100%;"><div class="value">56%</div><div class="label">中共十大 (1973)</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" style="margin-bottom: 1.5rem;">
+                <h3 class="section-title"><i class="fa-solid fa-scale-unbalanced-flip"></i>独裁者的两难选择</h3>
+                <div class="grid-container">
+                    <div class="card"><h4 class="card-title"><i class="fa-solid fa-users-gear"></i> 强者联盟</h4><ul><li><strong>优点:</strong> 治理能力强，机构稳定。</li><li><strong>缺点:</strong> 对独裁者构成巨大威胁。</li></ul></div>
+                    <div class="card"><h4 class="card-title"><i class="fa-solid fa-user-shield"></i> 弱者联盟</h4><ul><li><strong>优点:</strong> 独裁者个人权力绝对安全。</li><li><strong>缺点:</strong> 导致制度退化，治理能力下降。</li></ul></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title"><i class="fa-solid fa-timeline"></i>策略的历史演变</h3>
+                <div class="timeline">
+                    <div class="timeline-item"><div class="timeline-icon"><i class="fa-solid fa-book-dead"></i></div><h4>毛泽东时代</h4><p>全面推行“弱者联盟”，巩固个人权力，但也导致弱势接班人迅速垮台。</p></div>
+                    <div class="timeline-item"><div class="timeline-icon"><i class="fa-solid fa-users"></i></div><h4>邓小平时代</h4><p>转向元老集体领导，但元老们又倾向于提拔网络弱的技术官僚。</p></div>
+                    <div class="timeline-item"><div class="timeline-icon"><i class="fa-solid fa-star"></i></div><h4>习近平时代</h4><p>在弱势领导层中，凭借强大网络实现权力的再次高度集中。</p></div>
+                </div>
+            </div>
+
+            <footer>
+                <p>信息图根据 Victor C. Shih 的著作《Coalitions of the Weak》核心内容制作。由 Gemini 生成</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
