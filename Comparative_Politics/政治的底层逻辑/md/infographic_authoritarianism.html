@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>解剖威权统治的“生存工具箱” (A5 - Bright)</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap');
+
+        :root {
+            /* New Bright Color Palette */
+            --color-bg: #f4f7f9;
+            --color-card-bg: #ffffff;
+            --color-text: #555;
+            --color-heading: #111;
+            --color-accent1: #d93025; /* Repression - A strong red */
+            --color-accent2: #f39c12; /* Co-optation - A vibrant orange */
+            --color-accent3: #1a73e8; /* Legitimacy - A clear blue */
+            --color-border: #e0e0e0;
+            
+            --page-width: 70vh;
+            --page-height: 93.3vh;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: #d0d3d6; /* A neutral grey to frame the page */
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .page-container {
+            width: var(--page-width);
+            height: var(--page-height);
+            background-color: var(--color-bg);
+            display: flex;
+            flex-direction: column;
+            padding: 2vh;
+            box-sizing: border-box;
+            font-size: 1.3vh; /* Base font size */
+            line-height: 1.4;
+            box-shadow: 0 0 3vh rgba(0,0,0,0.15);
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 1.5vh;
+        }
+
+        header h1 {
+            font-size: 3.5vh;
+            font-weight: 700;
+            color: var(--color-heading);
+            margin: 0 0 1vh 0;
+        }
+
+        header p {
+            font-size: 1.5vh;
+            color: var(--color-text);
+            max-width: 90%;
+            margin: 0 auto;
+        }
+        
+        .main-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5vh;
+            margin: 1.5vh 0;
+        }
+
+        .card {
+            background-color: var(--color-card-bg);
+            border-radius: 6px;
+            padding: 1.5vh 1.2vw;
+            border-left: 4px solid;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 0 0.5vh 1vh rgba(0,0,0,0.05);
+        }
+
+        .card-repression { border-color: var(--color-accent1); }
+        .card-cooptation { border-color: var(--color-accent2); }
+        .card-legitimacy { border-color: var(--color-accent3); }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1vh;
+        }
+
+        .card-header .icon {
+            width: 3vh;
+            height: 3vh;
+            margin-right: 0.8vw;
+        }
+
+        .card-header .icon svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .card-header h3 {
+            font-size: 2.2vh;
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        .card-repression h3 { color: var(--color-accent1); }
+        .card-cooptation h3 { color: var(--color-accent2); }
+        .card-legitimacy h3 { color: var(--color-accent3); }
+
+        .card-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1vw;
+        }
+
+        .sub-section h4 {
+            font-size: 1.6vh;
+            font-weight: bold;
+            margin: 0 0 0.5vh 0;
+            color: var(--color-heading);
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .card ul li {
+            margin-bottom: 0.5vh;
+            color: var(--color-text);
+        }
+
+        footer {
+            margin-top: auto;
+            padding-top: 1.5vh;
+            border-top: 1px solid var(--color-border);
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .types-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0.8vw;
+            flex-grow: 1;
+        }
+
+        .type-card {
+            background-color: #ffffff;
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            padding: 0.5vh;
+            text-align: center;
+        }
+        .type-card .icon {
+            width: 2vh;
+            height: 2vh;
+            margin: 0 auto 0.3vh;
+        }
+        .type-card .icon svg path {
+            stroke: var(--color-text);
+        }
+        .type-card h4 {
+            margin: 0;
+            font-size: 1.2vh;
+            color: var(--color-text);
+            font-weight: 400;
+        }
+        
+        .evolution-section {
+            text-align: right;
+        }
+        .evolution-section h4 {
+            font-size: 1.6vh;
+            margin: 0 0 0.5vh 0;
+            color: var(--color-heading);
+        }
+        .evolution-section p {
+            font-size: 1.3vh;
+            margin: 0;
+            max-width: 25ch;
+            color: var(--color-text);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="page-container">
+        <header>
+            <h1>解剖威权统治的“生存工具箱”</h1>
+            <p>成功的威权政体如同一个三条腿的凳子，依靠压制、收买与合法性三股力量相互支撑，维持动态平衡。</p>
+        </header>
+
+        <main class="main-content">
+            <!-- Card 1: Repression -->
+            <div class="card card-repression">
+                <div class="card-header">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.5355 7.46448L16.9497 6.05026C18.5124 4.48764 21.0451 5.83293 21.0451 8.05026V8.05026C21.0451 9.15483 20.1548 10.0451 19.0503 10.0451H14M8.46448 16.5355L7.05026 17.9497C5.48764 19.5124 2.95492 18.1671 2.95492 15.9497V15.9497C2.95492 14.8452 3.84517 13.9549 4.94975 13.9549H10M10 14L14 10" stroke="var(--color-accent1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.75 10C8.54492 10 10 8.54492 10 6.75C10 4.95508 8.54492 3.5 6.75 3.5C4.95508 3.5 3.5 4.95508 3.5 6.75C3.5 8.54492 4.95508 10 6.75 10Z" stroke="var(--color-accent1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17.25 20.5C19.0449 20.5 20.5 19.0449 20.5 17.25C20.5 15.4551 19.0449 14 17.25 14C15.4551 14 14 15.4551 14 17.25C14 19.0449 15.4551 20.5 17.25 20.5Z" stroke="var(--color-accent1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>压制 (Repression)</h3>
+                </div>
+                <div class="card-body">
+                    <div class="sub-section">
+                        <h4>“硬压制”：看得见的铁拳</h4>
+                        <ul>
+                            <li>暴力威慑: 公开阅兵、警察力量</li>
+                            <li>司法武器化: 以法律之名镇压</li>
+                            <li>定点清除: 打击核心反对者</li>
+                        </ul>
+                    </div>
+                    <div class="sub-section">
+                        <h4>“软压制”：看不见的镣铐</h4>
+                        <ul>
+                            <li>信息控制: 防火墙与内容审查</li>
+                            <li>宣传认知战: 用噪音淹没真相</li>
+                            <li>数字监控: AI赋能的精准压制</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Co-optation -->
+            <div class="card card-cooptation">
+                <div class="card-header">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.5C12 15.5 12 15.5 12 15.5C10.067 15.5 8.5 13.933 8.5 12C8.5 10.067 10.067 8.5 12 8.5C13.933 8.5 15.5 10.067 15.5 12C15.5 13.933 13.933 15.5 12 15.5Z" stroke="var(--color-accent2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21.89 10.6L21.31 10.02C20.2 8.91 18.88 8.23 17.47 8.03L17.02 7.98C15.23 7.73 13.89 6.39 13.64 4.6L13.59 4.15C13.39 2.74 12.71 1.42 11.6 0.31L11.02 0.11C10.33 -0.18 9.54001 -0.03 9.01001 0.5L8.50001 1.01C7.59001 1.92 6.93001 3.09 6.63001 4.37L6.58001 4.82C6.33001 6.61 4.99001 7.95 3.20001 8.2L2.75001 8.25C1.34001 8.45 0.0200077 9.13 0.110008 10.24L0.310008 10.82C0.600008 11.51 1.03001 12.12 1.58001 12.63L2.09001 13.14C3.00001 14.05 4.17001 14.71 5.45001 15.01L5.90001 15.1C7.69001 15.35 9.03001 16.69 9.28001 18.48L9.33001 18.93C9.53001 20.34 10.21 21.66 11.32 22.77L11.9 23.35C12.59 23.64 13.38 23.49 13.91 22.96L14.42 22.45C15.33 21.54 15.99 20.37 16.29 19.09L16.34 18.64C16.59 16.85 17.93 15.51 19.72 15.26L20.17 15.17C21.58 14.97 22.9 14.29 22.71 13.18L22.51 12.6C22.22 11.91 21.79 11.3 21.24 10.79L21.89 10.6Z" stroke="var(--color-accent2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>收买 (Co-optation)</h3>
+                </div>
+                <div class="card-body">
+                    <div class="sub-section">
+                        <h4>精英收买：构建“共犯结构”</h4>
+                        <ul>
+                            <li>庇护主义: 用政府合同换取忠诚</li>
+                            <li>制度化吸纳: 设立“橡皮图章”议会</li>
+                            <li>军事-商业复合体: 让军队经商</li>
+                        </ul>
+                    </div>
+                    <div class="sub-section">
+                        <h4>社会收买：用福利换默许</h4>
+                        <ul>
+                            <li>分配性福利: 向特定群体精准“撒钱”</li>
+                            <li>创造依赖: 绑定住房、教育、医疗</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Legitimacy -->
+            <div class="card card-legitimacy">
+                <div class="card-header">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 14.5C15.5899 14.5 18.5 11.5899 18.5 8C18.5 4.41015 15.5899 1.5 12 1.5C8.41015 1.5 5.5 4.41015 5.5 8C5.5 11.5899 8.41015 14.5 12 14.5Z" stroke="var(--color-accent3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19.5 11.5L19.92 12.77C20.21 13.64 19.93 14.62 19.21 15.21L18.33 15.93C17.61 16.52 16.63 16.65 15.76 16.26L14.5 15.75M4.5 11.5L4.08 12.77C3.79 13.64 4.07 14.62 4.79 15.21L5.67 15.93C6.39 16.52 7.37 16.65 8.24 16.26L9.5 15.75M12 14.5V22.5M9 22.5H15" stroke="var(--color-accent3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>合法性 (Legitimacy)</h3>
+                </div>
+                <div class="card-body">
+                    <div class="sub-section">
+                        <h4>绩效合法性：用“面包”换忠诚</h4>
+                        <ul>
+                            <li>经济增长: 提高生活水平</li>
+                            <li>办大事能力: 宏大工程彰显国力</li>
+                            <li>提供秩序: 终结混乱，保障安全</li>
+                        </ul>
+                    </div>
+                    <div class="sub-section">
+                        <h4>意识形态与文化合法性</h4>
+                        <ul>
+                            <li>民族主义: 捆绑政权与民族命运</li>
+                            <li>官方意识形态: 论证“历史必然性”</li>
+                            <li>文化传统: 强调“特殊国情”</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="types-grid">
+                    <div class="type-card">
+                        <div class="icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 6L7 2H17L12 6Z" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 22L7 18H17L12 22Z" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12L6 7V17L2 12Z" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 12L18 7V17L22 12Z" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                        <h4>君主制</h4>
+                    </div>
+                    <div class="type-card">
+                        <div class="icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 19V22M13 19H18C19.1046 19 20 18.1046 20 17V12C20 8.13401 16.866 5 13 5V5C9.13401 5 6 8.13401 6 12V17C6 18.1046 6.89543 19 8 19H13Z" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 5V2M13 2H10.5L13 5ZM13 2H15.5L13 5Z" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                        <h4>军事政权</h4>
+                    </div>
+                    <div class="type-card">
+                        <div class="icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 5V19H19" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 2V5" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 2V5" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 2V5" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                        <h4>一党制</h4>
+                    </div>
+                    <div class="type-card">
+                        <div class="icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 21V19C19 16.7909 17.2091 15 15 15H9C6.79086 15 5 16.7909 5 19V21" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                        <h4>个人独裁</h4>
+                    </div>
+                    <div class="type-card">
+                        <div class="icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3L3 7L12 11L21 7L12 3Z" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 17L12 21L21 17" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 12L12 16L21 12" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 9V15" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M23 9V15" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                        <h4>竞争性威权</h4>
+                    </div>
+                </div>
+                <div class="evolution-section">
+                    <h4>威权主义的进化</h4>
+                    <p>通过制度化、技术官僚和数字监控，进化成更具韧性的“数字利维坦”。</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
