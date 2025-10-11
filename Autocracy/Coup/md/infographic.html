@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信息图：权力博弈的内在逻辑——解析《夺取政权》</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&display=swap');
+
+        :root {
+            --bg-color: #FAF3E0;
+            --text-color: #3D405B;
+            --primary-color: #E07A5F;
+            --secondary-color: #81B29A;
+            --card-bg-color: #FDF8EC;
+            --border-color: #F4F1DE;
+            --bar-bg-color: #EADFCB;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 2rem;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        header h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            opacity: 0.8;
+        }
+        
+        .disclaimer {
+            text-align: center;
+            font-style: italic;
+            opacity: 0.7;
+            margin-bottom: 3rem;
+            background-color: var(--card-bg-color);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 5px solid var(--secondary-color);
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 0.5rem auto 0;
+            border-radius: 2px;
+        }
+
+        .grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .card {
+            background-color: var(--card-bg-color);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .card-title i {
+            margin-right: 0.75rem;
+            font-size: 1.8rem;
+        }
+
+        .bar-chart-container {
+            margin-top: 1.5rem;
+        }
+
+        .bar-chart-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .bar {
+            height: 25px;
+            background-color: var(--bar-bg-color);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background-color: var(--primary-color);
+            border-radius: 5px;
+            text-align: right;
+            padding-right: 8px;
+            color: white;
+            font-weight: 700;
+            line-height: 25px;
+            white-space: nowrap;
+        }
+
+        .comparison-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+        
+        .comparison-column h4 {
+            font-size: 1.5rem;
+            text-align: center;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+
+        .comparison-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .comparison-list li {
+            background-color: var(--card-bg-color);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+            text-align: center;
+            font-weight: 400;
+        }
+        
+        .comparison-list li.positive { border-left: 4px solid var(--secondary-color); }
+        .comparison-list li.negative { border-left: 4px solid var(--primary-color); }
+        .comparison-list li.neutral { border-left: 4px solid #ccc; }
+
+
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            opacity: 0.6;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            header h1 {
+                font-size: 2.2rem;
+            }
+            header h2 {
+                font-size: 1.2rem;
+            }
+            .comparison-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>权力博弈的内在逻辑</h1>
+            <h2>对瑙尼哈尔·辛格《夺取政权》的核心思想可视化</h2>
+        </header>
+
+        <p class="disclaimer">注意：源文件内容详尽，以下是其核心要点的可视化总结。</p>
+
+        <section id="core-theory">
+            <h3 class="section-title">核心理论：作为协调博弈的政变</h3>
+            <div class="grid grid-3">
+                <div class="card">
+                    <h4 class="card-title"><i class="fa-solid fa-user-shield"></i>参与者动机</h4>
+                    <p>绝大多数军官并非基于意识形态，而是被两大理性动机驱使：<strong>避免站错队</strong>和<strong>避免军队内耗</strong>。决策的关键是预判大多数人会支持哪一方。</p>
+                </div>
+                <div class="card">
+                    <h4 class="card-title"><i class="fa-solid fa-bullhorn"></i>关键机制</h4>
+                    <p>“制造既成事实” (Fait Accompli) 是核心战略。通过行动向所有人传递“胜利已成定局”的信号，触发“跟风效应”，最终让预言自我实现。</p>
+                </div>
+                <div class="card">
+                    <h4 class="card-title"><i class="fa-solid fa-tower-broadcast"></i>信息渠道</h4>
+                    <p>创造“公共知识”是关键。主要依赖两种工具：<strong>大众媒体广播</strong>（快速广而告之）和<strong>召集指挥官会议</strong>（互动性强，更具说服力）。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="findings">
+            <h3 class="section-title">实证发现：为何发生 vs. 为何成功</h3>
+            <div class="comparison-container">
+                <div class="comparison-column">
+                    <h4><i class="fa-solid fa-circle-question"></i> 预测政变企图的因素</h4>
+                    <ul class="comparison-list">
+                        <li class="negative">经济落后 (人均GDP低)</li>
+                        <li class="negative">“半独裁”政体</li>
+                        <li class="positive">有成功政变历史</li>
+                    </ul>
+                </div>
+                <div class="comparison-column">
+                    <h4><i class="fa-solid fa-circle-check"></i> 预测政变成功的因素</h4>
+                    <ul class="comparison-list">
+                        <li class="neutral">经济与政体类型 (无显著影响)</li>
+                        <li class="negative">近期有失败政变历史</li>
+                        <li class="positive">发动者军衔等级高</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="typology">
+            <h3 class="section-title">政变类型学：三种路径</h3>
+            <div class="grid grid-3">
+                <div class="card">
+                    <h4 class="card-title"><i class="fa-solid fa-crown"></i> 来自高层的政变</h4>
+                    <p><strong>核心资源:</strong> 软实力 (官僚权威、信誉)。<br><strong>典型战术:</strong> 召集指挥官会议，制造一致同意的假象，兵不血刃。</p>
+                    <div class="bar-chart-container">
+                        <div class="bar-chart-label"><span>成功率</span><span>68%</span></div>
+                        <div class="bar"><div class="bar-fill" style="width: 68%;"></div></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h4 class="card-title"><i class="fa-solid fa-users-cog"></i> 来自中层的政变</h4>
+                    <p><strong>核心资源:</strong> 硬实力 (对作战部队的指挥权)。<br><strong>典型战术:</strong> 占领广播电台等关键节点，发布公告，制造既成事实。</p>
+                    <div class="bar-chart-container">
+                        <div class="bar-chart-label"><span>成功率</span><span>48%</span></div>
+                        <div class="bar"><div class="bar-fill" style="width: 48%;"></div></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h4 class="card-title"><i class="fa-solid fa-fist-raised"></i> 来自底层的政变</h4>
+                    <p><strong>核心资源:</strong> 革命性连锁反应。<br><strong>典型战术:</strong> 点燃兵变，吸引大量同袍加入，协调难度极大，伴随混乱。</p>
+                    <div class="bar-chart-container">
+                        <div class="bar-chart-label"><span>成功率</span><span>32%</span></div>
+                        <div class="bar"><div class="bar-fill" style="width: 32%;"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="implications">
+            <h3 class="section-title">理论局限与未来启示</h3>
+             <div class="grid grid-2">
+                <div class="card">
+                    <h4 class="card-title"><i class="fa-solid fa-magnifying-glass"></i> 理论的局限</h4>
+                    <ul>
+                        <li><strong>意识形态与情感:</strong> 理论基于理性人假设，可能低估了意识形态、民族仇恨或个人激情的作用。</li>
+                        <li><strong>社交媒体时代:</strong> 理论基于前社交媒体时代，信息传播方式的改变可能影响“公共知识”的形成。</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4 class="card-title"><i class="fa-solid fa-lightbulb"></i> 政策启示</h4>
+                     <ul>
+                        <li><strong>保障通信渠道:</strong> 确保政府在危机中不会被轻易切断与外界的联系。</li>
+                        <li><strong>快速信息反应:</strong> 第一时间发布权威信息，打破政变方的信息垄断，制造竞争性叙事。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>信息图根据瑙尼哈尔·辛格《夺取政权》的核心论点生成。</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
